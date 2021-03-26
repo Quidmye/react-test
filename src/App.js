@@ -38,7 +38,7 @@ function generateName(){
 }
 
 let countries = ['Norway', 'Germany', 'France', 'Czech Republic', 'Sweden', 'Slovenia', 'Russia', 'Finland', 'Lithuania', 'Canada', 'Belarus'];
-let bestTime = getRandomInt(2880000, 3180000);
+let bestTime = getRandomInt(2880000, 4180000);
 let fixTime = bestTime;
 let num = 26;
 
@@ -49,7 +49,7 @@ for (let i = 1; i < num; i++){
         (getRandomInt((i > (num/2)) ? i/2 : i, num)) > (num/2) ? 1 : 0,
         (getRandomInt((i > (num/2)) ? i/2 : i, num)) > (num/2) ? 1 : 0,
     ];
-    let result = getRandomInt(fixTime, 3180000);
+    let result = getRandomInt(fixTime, fixTime+100000);
     fixTime = result;
     let minutes = Math.floor(result / 60000);
     let seconds = Math.floor((result % 60000) / 1000);
